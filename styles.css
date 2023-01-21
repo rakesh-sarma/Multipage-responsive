@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* font-family:'Courier New', Courier, monospace; */
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/* LOGO */
+.logo{
+    font-size: 32px;
+}
+.logo a{
+    color: white;
+}
+/* Navbar Styling Start */
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #567189;
+    color: white;
+}
+.nav-links a{
+    color: white;
+    font-size: 25px;
+}
+/* Navbar Menu */
+.menu{
+    display: flex;
+    gap:2em;
+}
+.menu li:hover{
+    background-color: #7B8FA1;
+    transition: 0.3ease;
+    color: black;
+}
+.menu li{
+    padding: 8px 14px;
+}
+.menu li a:hover{
+    color: black;
+}
+/* Dropdown Menu */
+.dept{
+    position: relative;
+}
+.dept:hover .dropdown{
+    display: block;
+}
+.dropdown{
+    background-color:#567189;
+    text-align: center;
+    padding:  0;
+    margin-top: 10px;
+    right:1px;
+    display: none;
+    position: absolute;
+    width: 168px;
+    border: 1px solid white;
+}
+
+/* RESPONSIVENESS */
+input[type="checkbox"]{
+    display: none;
+}
+.hamburger{
+    display: none;
+}
+@media(max-width:750px){
+    .menu{
+        display:none;
+        position: absolute;
+        background-color: #567189;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 16px 0;
+    }
+    .hamburger{
+        display: block;
+        font-size: 40px;
+    }
+    input[type="checkbox"]:checked~ .menu{
+        display: block;
+    }
+    .dropdown{
+        border: none;
+    }
+}
